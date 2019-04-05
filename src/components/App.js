@@ -1,4 +1,5 @@
 import React from "react";
+import "semantic-ui-css/semantic.min.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import StreamCreate from "./streams/StreamCreate";
 import StreamList from "./streams/StreamList";
