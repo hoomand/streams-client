@@ -1,7 +1,6 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
 import { Link } from "react-router-dom";
-import { Menu } from "semantic-ui-react";
 import GoogleAuth from "./GoogleAuth";
 
 class Header extends React.Component {
@@ -21,5 +20,19 @@ class Header extends React.Component {
     );
   }
 }
+
+const validate = formValues => {
+  const errors = {};
+
+  if (!formValues.title) {
+    errors.title = "You must enter a title";
+  }
+
+  if (!formValues.description) {
+    errors.description = "You must enter a description";
+  }
+
+  return errors;
+};
 
 export default Header;
