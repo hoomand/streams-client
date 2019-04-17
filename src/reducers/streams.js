@@ -11,6 +11,8 @@ export default (state = {}, action) => {
   switch (action.type) {
     default:
       return state;
+    case FETCH_STREAMS:
+      return { ...state, ..._.mapKeys(action.payload, "id") };
     case FETCH_STREAM:
     case CREATE_STREAM:
     case EDIT_STREAM:
